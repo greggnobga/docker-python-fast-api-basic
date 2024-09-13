@@ -1,5 +1,18 @@
 
-from sqlmodel import SQLModel, Field # type: ignore
+from sqlmodel import SQLModel, Field, Relationship # type: ignore
+
+class TripInput(SQLModel):
+    start: int
+    end: int
+    description: str
+
+class TripOutput(TripInput):
+    id: int
+
+class Trip(TripInput, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+    car_id: int = Field(foreign_key="car.id")
+    car: "Car" = Relationship(back_populates="trips")
 
 class CarInput(SQLModel):
     size: str
@@ -17,5 +30,10 @@ class CarInput(SQLModel):
             }
         }
 
+class CarOutput(CarInput):
+    id: int
+    trips: list[TripOutput] = []
+
 class Car(CarInput, table=True):
     id: int | None = Field(primary_key=True, default=None)
+    trips: list[Trip] = Relationship(back_populates="car")

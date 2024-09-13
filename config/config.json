@@ -8,8 +8,8 @@
   "applications": {
     "fastapi": {
       "type": "python 3.9",
-      "path": "/app",
-      "module": "app.main",
+      "path": "/app/src",
+      "module": "main",
       "callable": "app"
     }
   }
