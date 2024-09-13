@@ -1,0 +1,6 @@
+fastapi==0.114.1
+pydantic==2.9.1
+starlette==0.38.5
+typing-extensions==4.12.2
+uvicorn==0.30.6
+sqlmodel==0.0.22
