@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Sharing: Search Result</title>
+  </head>
+  <body>
+    <p>We found matching cars:</p>
+    <ul>
+      {% for car in cars %}
+      <li>{{car}}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

@@ -4,3 +4,6 @@ starlette==0.38.5
 typing-extensions==4.12.2
 uvicorn==0.30.6
 sqlmodel==0.0.22
+Jinja2==3.1.4
+python-multipart==0.0.9
+passlib==1.7.4

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Sharing</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="favicon.ico" />
+  </head>
+  <body>
+    <h1>Welcom to car sharing service.</h1>
+    <p>Search for the car you need:</p>
+    <form action="search" method="POST">
+      <table>
+        <tr>
+          <td><label for="doors">Number of doors:</label></td>
+          <td><input type="number" min="1" max="5" name="doors" required /></td>
+        </tr>
+        <tr>
+          <td><label for="size">Size:</label></td>
+          <td>
+            <select name="size" required>
+              <option value="s">Small</option>
+              <option value="m">Medium</option>
+              <option value="l">Large</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><button type="submit">Search</button></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
